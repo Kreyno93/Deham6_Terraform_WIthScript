@@ -1,6 +1,6 @@
 
     provider "aws" {
-        region                      = var.region
+        region = var.region
     }
     data "aws_availability_zones" "my_vpc_available"{}
     resource "aws_vpc" "my_vpc" {
@@ -109,9 +109,9 @@
             }
     }
     locals {
-            DB      ="mydb"
-            User    ="alex"
-            PW      ="password123"
+            DB      ="kreynodb"
+            User    ="kreynolds"
+            PW      ="password123!"
     }
     resource "aws_instance" "webserver" {
         ami                         = data.aws_ami.amzLinux.id
